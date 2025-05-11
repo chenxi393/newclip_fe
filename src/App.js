@@ -33,6 +33,7 @@ function App() {
         refreshVideos();
         return;
       }
+      dispatch(changeNextTime(res.next_time));
       dispatch(resetVideos(res.video_list));
     }
     refreshVideos(); // eslint-disable-next-line
